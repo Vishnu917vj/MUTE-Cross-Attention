@@ -1,4 +1,4 @@
-<img width="91" height="150" alt="mermaid-diagram" src="https://github.com/user-attachments/assets/1ee77566-c980-4f88-aeb3-3dac4cbab116" /># MUTE Phase 2: Multimodal Stance Detection
+# MUTE Phase 2: Multimodal Stance Detection
 
 **Multimodal Architecture for Stance Classification (Favour / Against / Neutral)**  
 using **Google's MuRIL** (text) + **Google's ViT** (vision) with **Cross-Attention Fusion**.
@@ -67,7 +67,7 @@ After extracting features from both modalities, a **Cross-Attention** mechanism 
   - python train_cross_attention.py
   
 ##  architecture
-![Demo Image](MUTE-Cross-Attention/mermaid-diagram.svg)
+![Demo Image](https://github.com/Vishnu917vj/MUTE-Cross-Attention/blob/main/mermaid-diagram.svg)
 
 
 The model is implemented in PyTorch using the Hugging Face Transformers library.
