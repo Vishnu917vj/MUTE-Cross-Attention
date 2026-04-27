@@ -54,29 +54,20 @@ After extracting features from both modalities, a **Cross-Attention** mechanism 
 - **Loss**: Cross-Entropy Loss
 - **Optimizer**: AdamW
 
-### Overall Flow
+## 🚀 Quick Start
 
-```mermaid
-graph TD
-    A[Input Image] --> B[ViT Encoder]
-    C[Input Text] --> D[MuRIL Encoder]
-    B --> E[Image Embeddings]
-    D --> F[Text Embeddings]
-    E & F --> G[Cross-Attention Fusion]
-    G --> H[Fused Representation]
-    H --> I[Classification Head]
-    I --> J[Output: Favour / Against / Neutral]
+## clone 
+ git clone https://github.com/Vishnu917vj/MUTE-Cross-Attention.git
+ cd MUTE-Cross-Attention
+ # Install PyTorch (choose the correct CUDA version for your system)
+  pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
 
-Key Advantage: Unlike simple concatenation, Cross-Attention allows the model to dynamically learn which parts of the image are relevant to the text (and vice versa), resulting in richer multimodal understanding.
+  # Install other dependencies
+  pip install transformers datasets pandas openpyxl tqdm
+  python train_cross_attention.py
+  
+##
 
-git clone https://github.com/Vishnu917vj/MUTE-Cross-Attention.git
-cd MUTE-Cross-Attention
-# or cd mute-phase-2 (depending on your folder name)
-
-pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
-pip install transformers datasets pandas openpyxl tqdm
-
-Implementation Notes
 
 The model is implemented in PyTorch using the Hugging Face Transformers library.
 Trained models are saved as .pth files in the models/ directory.
